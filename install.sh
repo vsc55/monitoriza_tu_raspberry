@@ -34,6 +34,8 @@ do
 		if [[ $(diff "${CHEKC_ULTIMA}" "${f}") ]]; then
 			cp ${f} ${CHEKC}
 		fi
+	else
+		cp ${f} ${PATH_DEST}
 	fi
 done
 cp data/watchful.service /lib/systemd/system/
